@@ -7,14 +7,6 @@ Template.overlay.helpers({
     return Session.get('overlay');
   },
 
-  newVideo: function(){
-    return Session.equals('overlay', 'newVideo');
-  },
-
-  viewLibrary: function(){
-    return Session.equals('overlay', 'viewLibrary');
-  },
-
   loginForm: function(){
     return Session.equals('overlay', 'loginForm');
   }
@@ -29,8 +21,6 @@ Template.overlay.events({
     if (!Session.get('currentView')) {
       Router.navigate('');
     } else {
-      var currentId = Session.get('currentVideo');
-      Router.navigate('project/'+currentId);
     }
 
     $('#overlay').removeClass('active');

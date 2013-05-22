@@ -12,23 +12,19 @@ Template.navigation.helpers({
 Template.navigation.events({
 
   'click .brand' : function() {
-    Session.set('currentView', null);
-    Session.set('currentVideo', null);
     Router.navigate('');
     return false;
   },
 
   'click .logout' : function() {
     Meteor.logout();
-    Session.set('currentView', null);
-    Session.set('currentVideo', null);
     Router.navigate('');
     return false;
   },
 
-  'click .view-library' : function() {
+  'click .view-collection' : function() {
     Session.set('overlay', 'viewLibrary');
-    Router.navigate('library');
+    Router.navigate('collection');
     return false;
   },
 

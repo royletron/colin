@@ -10,3 +10,8 @@ bootstrap
 accounts-password
 accounts-base
 mini-pages
+backbone
+jquery
+jquery-ui
+stylus
+toastjs

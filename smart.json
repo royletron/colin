@@ -4,6 +4,8 @@
     "branch": "master"
   },
   "packages": {
-    "mini-pages": {}
+    "mini-pages": {},
+    "jquery-ui": {},
+    "toastjs": {}
   }
 }

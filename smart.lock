@@ -6,13 +6,25 @@
   },
   "dependencies": {
     "basePackages": {
-      "mini-pages": {}
+      "mini-pages": {},
+      "jquery-ui": {},
+      "toastjs": {}
     },
     "packages": {
       "mini-pages": {
         "git": "https://github.com/cmather/meteor-mini-pages.git",
         "tag": "v0.3.1",
         "commit": "d218140d37b0dbec975880755c2035ae9e022936"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "toastjs": {
+        "git": "https://github.com/srackham/toast.js.git",
+        "tag": "v2.0.5",
+        "commit": "55f5af84be856ab819bdda4135f4203c499cf2d6"
       },
       "HTML5-History-API": {
         "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",

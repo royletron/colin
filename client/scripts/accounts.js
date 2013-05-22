@@ -67,33 +67,6 @@ function onLogin(err){
   Session.set('overlay', null);
 }
 
-// Create a project if we are in 'createProjectFlow'.
-function createProject(){
-  var videoObject = Session.get('createProjectFlow');
-
-  var newProject = {
-    user: Meteor.userId(),
-    created: new Date(),
-    type: videoObject.type,
-    url : videoObject.url
-  };
-
-  if (videoObject.type === 'html') {
-    newProject.name = videoObject.name;
-  }
-
-  // actually insert new object into database
-  var newVideo = Videos.insert(newProject);
-  Router.navigate('project/' + newVideo);
-
-  delete Subtitler.videoNode;
-  Session.set('currentVideo', newVideo);
-  Session.set('loadingError', null);
-  Session.set('currentView', 'app');
-  Session.set('createProjectFlow', null);
-}
-
-
 // Login Form Events
 Template.loginForm.events({
 
@@ -101,7 +74,7 @@ Template.loginForm.events({
     e.preventDefault();
     var email = trimInput(t.find('#login-email').value.toLowerCase())
       , password = t.find('#login-password').value;
-
+    console.log(email+":"+password);
     if (isNotEmpty(email, 'loginError')
         && isNotEmpty(password, 'loginError'))
     {
@@ -152,15 +125,17 @@ Template.createAccountForm.events({
 
   'submit #register-form' : function(e, t) {
     var email = trimInput(t.find('#account-email').value.toLowerCase())
+      , username = t.find('#account-username').value
       , password = t.find('#account-password').value;
 
     if (isNotEmpty(email, 'accountError')
         && isNotEmpty(password, 'accountError')
         && isEmail(email, 'accountError')
+        && isNotEmpty(username, 'accountError')
         && isValidPassword(password, 'accountError'))
     {
       Session.set('loading', true);
-      Accounts.createUser({email: email, password : password}, function(err){
+      Accounts.createUser({email: email, username: username, password : password}, function(err){
         if (err && err.error === 403) {
           Session.set('displayMessage', 'Account Creation Error &' + err.reason);
           Session.set('loading', false);
