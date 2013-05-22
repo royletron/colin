@@ -1,0 +1,23 @@
+<head>
+    <title>colin-bup</title>
+</head>
+<body>
+</body>
+<template name="layout">
+    <div class="container">
+        <div class="masthead">
+            <div class="pull-right">
+                <ul class="nav nav-pills pull-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+            <h3 class="muted">Project name</h3>
+        </div>
+        <hr>
+        {{{yield}}}
+    </div>
+</template>
+<template name="home">
+    <h1>Hello World!</h1>
+</template>

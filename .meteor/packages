@@ -6,3 +6,7 @@
 autopublish
 insecure
 preserve-inputs
+bootstrap
+accounts-password
+accounts-base
+mini-pages

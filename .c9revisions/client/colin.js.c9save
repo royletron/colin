@@ -1,0 +1,2 @@
+{"ts":1369222493886,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1369222456541,"patch":[[{"diffs":[[1,"Template.hello.greeting = function() {\n    return \"Welcome to colin-bup.\";\n};\n\nTemplate.hello.events({\n    'click input': function() {\n        // template data, if any, is available in 'this'\n        if (typeof console !== 'undefined') console.log(\"You pressed the button\");\n    }\n});"]],"start1":0,"start2":0,"length1":0,"length2":284}]],"length":284,"saved":false}

@@ -1,7 +1,9 @@
 {
   "meteor": {
-    "git": "https://github.com/meteor/meteor.git",
+    "git": "https://github.com/royletron/meteor.git",
     "branch": "master"
   },
-  "packages": {}
+  "packages": {
+    "mini-pages": {}
+  }
 }
