@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "bmcmahen/confirmation": "*",
-    "component/emitter": "*",
-    "bmcmahen/notification": "*",
-    "bmcmahen/canvas-loading-animation": "*"
-  }
-}
